@@ -1,0 +1,51 @@
+<title>Current balance: $1000</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Finance Manager</title>
+  <link rel="stylesheet" href="j.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Personal Finance Manager</h1>
+    <div class="transaction-input">
+      <input type="text" id="description" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <select id="category">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button id="addTransaction">Add Transaction</button>
+    </div>
+    <div class="transaction-filter">
+      <label for="filterCategory">Filter by Category:</label>
+      <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <label for="filterPrice">Filter by Price:</label>
+      <input type="number" id="filterPrice" placeholder="Price">
+    </div>
+    <div class="transaction-list">
+      <h2>Transactions:</h2>
+      <ul id="transactions"></ul>
+      <h2 id="balance">Balance: $0</h2>
+    </div>
+    <div class="tax-calculation">
+      <h2>Tax Calculation:</h2>
+      <input type="number" id="priceWithoutTax" placeholder="Price without tax">
+      <select id="taxRate">
+        <option value="0.21">21%</option>
+        <option value="0.15">15%</option>
+        <option value="0.10">10%</option>
+      </select>
+      <button id="calculateTax">Calculate Tax</button>
+      <h3>Total Price with Tax: <span id="totalPriceWithTax">0</span></h3>
+      <h3>Tax Amount: <span id="taxAmount">0</span></h3>
+    </div>
+  </div>
+  <script src="i.js"></script>
+</body>
+</html>
